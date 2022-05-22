@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_component"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="binar.greta.latihan_pert6.fragment.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/btn_loginKeRegis"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/btn_loginKeHome"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="binar.greta.latihan_pert6.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/btn_homeKeProf"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/btn_HomeKeTambah"
+            app:destination="@id/tambahFragment" />
+        <action
+            android:id="@+id/btn_homeKeDetail"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="binar.greta.latihan_pert6.fragment.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/regisKeLogin"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="binar.greta.latihan_pert6.fragment.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="binar.greta.latihan_pert6.fragment.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/btn_profKeHome"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tambahFragment"
+        android:name="binar.greta.latihan_pert6.fragment.TambahFragment"
+        android:label="fragment_tambah"
+        tools:layout="@layout/fragment_tambah" />
+</navigation>
